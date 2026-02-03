@@ -19,7 +19,7 @@ console.log(person["petnavn"]);
 
 // opgave 2 
 
-let person2 = {
+const person2 = {
     firstname: "hans",
     lastname: "hansen",
     udannelse: true,
@@ -31,10 +31,14 @@ let person2 = {
         navn: "monkeydonkey"
     },
 
- 
 }
 
 console.log(person2.pet.type);
-console.log(person2.pet.navn);   
+console.log(person2.pet.navn);
+
+person2.hobbies.forEach(function(hobby) {
+    console.log(hobby);
+});
+
 
 
