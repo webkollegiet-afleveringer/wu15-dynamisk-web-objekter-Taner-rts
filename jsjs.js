@@ -36,7 +36,7 @@ const person2 = {
 console.log(person2.pet.type);
 console.log(person2.pet.navn);
 
-person2.hobbies.forEach(function(hobby) {
+person2.hobbies.forEach(function (hobby) {
     console.log(hobby);
 });
 
@@ -44,27 +44,34 @@ person2.hobbies.forEach(function(hobby) {
 // opgave 3 
 
 let students = [
-  { name: "Sofie", age: 25, course: "Webudvikler" },
-  { name: "Lukas", age: 22, course: "Mediegrafiker" },
-  { name: "Emil", age: 28, course: "Teknisk designer" },
+    { name: "Sofie", age: 25, course: "Webudvikler" },
+    { name: "Lukas", age: 22, course: "Mediegrafiker" },
+    { name: "Emil", age: 28, course: "Teknisk designer" },
 ];
 
 
 let studentListDiv = document.querySelector(".hey")
 
-students.forEach(function(student) {
+students.forEach(function (student) {
 
     console.log(student);
 
     let studentDiv = document.createElement("div");
-     studentDiv.classList.add("hey");
+    studentDiv.classList.add("student");
 
-    studentDiv.textContent = 
-    student.name + ', alder: ' + student.age + ', Udannelse:' + student.course;
+    let studentHeadline = document.createElement("h2");
+    studentHeadline.textContent = student.name;
+
+    let studentInfo = document.createElement("p")
+    studentInfo.textContent = student.name + ', alder: ' + student.age + ', Udannelse:' + student.course;
+
+    studentDiv.append(studentHeadline, studentInfo)
     studentListDiv.append(studentDiv);
 });
 
 
 // Ekstraopgave 1, ekstraopgaven er øverst, hvor der er tilføjet classlist. add og append.
 
+
+// ekstraopgave 2, er også øverst, hvor der er tilføjet igen. 
 
