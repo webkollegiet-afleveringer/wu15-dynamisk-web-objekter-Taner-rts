@@ -57,9 +57,14 @@ students.forEach(function(student) {
     console.log(student);
 
     let studentDiv = document.createElement("div");
+     studentDiv.classList.add("hey");
 
     studentDiv.textContent = 
     student.name + ', alder: ' + student.age + ', Udannelse:' + student.course;
     studentListDiv.append(studentDiv);
 });
+
+
+// Ekstraopgave 1, ekstraopgaven er øverst, hvor der er tilføjet classlist. add og append.
+
 
